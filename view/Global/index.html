@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Global class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>Global - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">Global</a>
+    </h1>
+
+    
+    <p>这些功能可随时随地使用，包括在启动时使用</p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddTaxiPath.html'>AddTaxiPath</a>
+            </td>
+            <td class='docblock short'>
+                <p>将航线路径添加到指定地图，并返回使用的pathId.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddVendorItem.html'>AddVendorItem</a>
+            </td>
+            <td class='docblock short'>
+                <p>向供应商添加 <a class="mod" href="../Item/index.html">Item</a> 商品并更新世界数据库.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AuthDBExecute.html'>AuthDBExecute</a>
+            </td>
+            <td class='docblock short'>
+                <p>在登录数据库上执行SQL查询.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AuthDBQuery.html'>AuthDBQuery</a>
+            </td>
+            <td class='docblock short'>
+                <p>在登录数据库上执行SQL查询并返回 <a class="mod" href="../ElunaQuery/index.html">ElunaQuery</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Ban.html'>Ban</a>
+            </td>
+            <td class='docblock short'>
+                <p>封禁 <a class="mod" href="../Player/index.html">Player</a> 帐户，角色或IP</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CharDBExecute.html'>CharDBExecute</a>
+            </td>
+            <td class='docblock short'>
+                <p>在角色数据库上执行SQL查询.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CharDBQuery.html'>CharDBQuery</a>
+            </td>
+            <td class='docblock short'>
+                <p>在角色数据库上执行SQL查询并返回 <a class="mod" href="../ElunaQuery/index.html">ElunaQuery</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearBattleGroundEvents.html'>ClearBattleGroundEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除所有 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 事件或一种事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearCreatureEvents.html'>ClearCreatureEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Creature/index.html">Creature</a> 事件或一种事件类型的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearCreatureGossipEvents.html'>ClearCreatureGossipEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Creature/index.html">Creature</a> 的菜单事件或一种类型的事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearGameObjectEvents.html'>ClearGameObjectEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../GameObject/index.html">GameObject</a> 事件的事件处理程序，或者一种类型的事件</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearGameObjectGossipEvents.html'>ClearGameObjectGossipEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../GameObject/index.html">GameObject</a> 的菜单事件的事件处理程序，或一种类型的事件</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearGroupEvents.html'>ClearGroupEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Group/index.html">Group</a> 事件或一种类型的 <a class="mod" href="../Group/index.html">Group</a> 事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearGuildEvents.html'>ClearGuildEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Guild/index.html">Guild</a> 事件或一种<a class="mod" href="../Guild/index.html">Guild</a> 事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearInstanceEvents.html'>ClearInstanceEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除实例化 <a class="mod" href="../Map/index.html">Map</a> 事件或一种类型事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearItemEvents.html'>ClearItemEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Item/index.html">Item</a> 事件或一种事件类型的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearItemGossipEvents.html'>ClearItemGossipEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Item/index.html">Item</a> 的菜单事件或一种事件类型的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearMapEvents.html'>ClearMapEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除非实例化 <a class="mod" href="../Map/index.html">Map</a> 的事件或一种事件类型的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearPacketEvents.html'>ClearPacketEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 操作码的所有事件或一种类型事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearPlayerEvents.html'>ClearPlayerEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Player/index.html">Player</a> 事件或一种 <a class="mod" href="../Player/index.html">Player</a> 事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearPlayerGossipEvents.html'>ClearPlayerGossipEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Player/index.html">Player</a> 的菜单事件或一种事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearServerEvents.html'>ClearServerEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除所有服务器事件或一种事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearUniqueCreatureEvents.html'>ClearUniqueCreatureEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>解除 <a class="mod" href="../Creature/index.html">Creature</a> 的所有事件或一种事件类型的事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CreateLongLong.html'>CreateLongLong</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回long long(64-bit)值的对象 (long long = 长整数)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CreateLuaEvent.html'>CreateLuaEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册全局定时事件.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CreatePacket.html'>CreatePacket</a>
+            </td>
+            <td class='docblock short'>
+                <p>创建 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CreateULongLong.html'>CreateULongLong</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回无符号 long long(64-bit)值的对象</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetActiveGameEvents.html'>GetActiveGameEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回当前活动的游戏事件.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAreaName.html'>GetAreaName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回区域或区域的名称.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCoreExpansion.html'>GetCoreExpansion</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回模拟器支持的扩展.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCoreName.html'>GetCoreName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回模拟器的名字.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCoreVersion.html'>GetCoreVersion</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回模拟器版本</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCurrTime.html'>GetCurrTime</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回服务器的当前时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGUIDEntry.html'>GetGUIDEntry</a>
+            </td>
+            <td class='docblock short'>
+                <p>从GUID返回条目ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGUIDLow.html'>GetGUIDLow</a>
+            </td>
+            <td class='docblock short'>
+                <p>从GUID返回低GUID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGUIDType.html'>GetGUIDType</a>
+            </td>
+            <td class='docblock short'>
+                <p>从GUID返回类型ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGameTime.html'>GetGameTime</a>
+            </td>
+            <td class='docblock short'>
+                <p>以秒为单位返回游戏时间</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGuildByLeaderGUID.html'>GetGuildByLeaderGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过领导者的GUID返回 <a class="mod" href="../Guild/index.html">Guild</a> (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGuildByName.html'>GetGuildByName</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过名称返回 <a class="mod" href="../Guild/index.html">Guild</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetItemGUID.html'>GetItemGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>建立 <a class="mod" href="../Item/index.html">Item</a> 的GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetItemLink.html'>GetItemLink</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的聊天频道信息链接</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLuaEngine.html'>GetLuaEngine</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回Lua引擎的名称.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMapById.html'>GetMapById</a>
+            </td>
+            <td class='docblock short'>
+                <p>按ID返回一个 <a class="mod" href="../Map/index.html">Map</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetObjectGUID.html'>GetObjectGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>构建 <a class="mod" href="../GameObject/index.html">GameObject</a> 的GUID (构建=生成?)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayerByGUID.html'>GetPlayerByGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过GUID获取 <a class="mod" href="../Player/index.html">Player</a>(可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayerByName.html'>GetPlayerByName</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过名称获取 <a class="mod" href="../Player/index.html">Player</a>(可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayerCount.html'>GetPlayerCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回游戏内的 <a class="mod" href="../Player/index.html">Player</a> 数量</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayerGUID.html'>GetPlayerGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>构建 <a class="mod" href="../Player/index.html">Player</a> 的GUID (构建=生成?)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayersInWorld.html'>GetPlayersInWorld</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回一个包含游戏内所有当前在线 <a class="mod" href="../Player/index.html">Player</a> 的表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetQuest.html'>GetQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Quest/index.html">Quest</a> 模板</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetTimeDiff.html'>GetTimeDiff</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回旧时间戳和当前时间之间的时差</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetUnitGUID.html'>GetUnitGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>构建 <a class="mod" href="../Creature/index.html">Creature</a> 的GUID (构建=生成?)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBagPos.html'>IsBagPos</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果包的槽位是一个有效的袋子位置 则返回true 否则false (应该有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBankPos.html'>IsBankPos</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果包的槽位是一个有效的银行位置 则返回true 否则false (应该有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsEquipmentPos.html'>IsEquipmentPos</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果包的槽位是一个有效的装备位置 则返回true 否则false (应该有误 equipment = 装备?)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsGameEventActive.html'>IsGameEventActive</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果事件当前处于活动状态 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInventoryPos.html'>IsInventoryPos</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果包的槽位是一个有效的库存位置 则返回true 否则false (应该有误 库存 = 存放?)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Kick.html'>Kick</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Player/index.html">Player</a> 踢出服务器</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='PerformIngameSpawn.html'>PerformIngameSpawn</a>
+            </td>
+            <td class='docblock short'>
+                <p>执行生成,并返回生成的 <a class="mod" href="../Creature/index.html">Creature</a> 或 <a class="mod" href="../GameObject/index.html">GameObject</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='PrintDebug.html'>PrintDebug</a>
+            </td>
+            <td class='docblock short'>
+                <p>将给定参数打印到调试日志.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='PrintError.html'>PrintError</a>
+            </td>
+            <td class='docblock short'>
+                <p>将给定参数打印到错误日志.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='PrintInfo.html'>PrintInfo</a>
+            </td>
+            <td class='docblock short'>
+                <p>将给定参数打印到信息日志.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterBGEvent.html'>RegisterBGEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterCreatureEvent.html'>RegisterCreatureEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Creature/index.html">Creature</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterCreatureGossipEvent.html'>RegisterCreatureGossipEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Creature/index.html">Creature</a> 菜单事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterGameObjectEvent.html'>RegisterGameObjectEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../GameObject/index.html">GameObject</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterGameObjectGossipEvent.html'>RegisterGameObjectGossipEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../GameObject/index.html">GameObject</a> 菜单事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterGroupEvent.html'>RegisterGroupEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Group/index.html">Group</a> 事件处理程序.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterGuildEvent.html'>RegisterGuildEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Guild/index.html">Guild</a> 事件处理程序.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterInstanceEvent.html'>RegisterInstanceEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>为 <a class="mod" href="../Map/index.html">Map</a> 实例注册一个 <a class="mod" href="../Map/index.html">Map</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterItemEvent.html'>RegisterItemEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Item/index.html">Item</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterItemGossipEvent.html'>RegisterItemGossipEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Item/index.html">Item</a> 菜单事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterMapEvent.html'>RegisterMapEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>为 <a class="mod" href="../Map/index.html">Map</a> 的所有实例注册一个 <a class="mod" href="../Map/index.html">Map</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterPacketEvent.html'>RegisterPacketEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterPlayerEvent.html'>RegisterPlayerEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Player/index.html">Player</a> 事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterPlayerGossipEvent.html'>RegisterPlayerGossipEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个 <a class="mod" href="../Player/index.html">Player</a> 菜单事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterServerEvent.html'>RegisterServerEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>注册一个服务器事件处理程序</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterUniqueCreatureEvent.html'>RegisterUniqueCreatureEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>为单一 <a class="mod" href="../Creature/index.html">Creature</a> 注册一个 <a class="mod" href="../Creature/index.html">Creature</a> 事件处理程序 (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReloadEluna.html'>ReloadEluna</a>
+            </td>
+            <td class='docblock short'>
+                <p>重新加载Lua引擎.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveEventById.html'>RemoveEventById</a>
+            </td>
+            <td class='docblock short'>
+                <p>删除指定ID的全局定时事件.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveEvents.html'>RemoveEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>删除所有全局定时事件.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SaveAllPlayers.html'>SaveAllPlayers</a>
+            </td>
+            <td class='docblock short'>
+                <p>保存所有 <a class="mod" href="../Player/index.html">Player</a>s.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendMail.html'>SendMail</a>
+            </td>
+            <td class='docblock short'>
+                <p>发送邮件给 <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendWorldMessage.html'>SendWorldMessage</a>
+            </td>
+            <td class='docblock short'>
+                <p>向所有在线 <a class="mod" href="../Player/index.html">Player</a>s 发送消息</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='StartGameEvent.html'>StartGameEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过eventId启动事件，如果设置为force，则事件将强制启动，而不管先前事件状态如何</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='StopGameEvent.html'>StopGameEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过eventId停止事件，如果设置为force，则事件将强制停止，而不管先前事件状态如何</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='VendorRemoveAllItems.html'>VendorRemoveAllItems</a>
+            </td>
+            <td class='docblock short'>
+                <p>删除商人所有的 <a class="mod" href="../Item/index.html">Item</a> 并更新数据库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='VendorRemoveItem.html'>VendorRemoveItem</a>
+            </td>
+            <td class='docblock short'>
+                <p>删除商人指定的 <a class="mod" href="../Item/index.html">Item</a> 并更新数据库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WorldDBExecute.html'>WorldDBExecute</a>
+            </td>
+            <td class='docblock short'>
+                <p>在 World 数据库上执行SQL查询</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WorldDBQuery.html'>WorldDBQuery</a>
+            </td>
+            <td class='docblock short'>
+                <p>在 World 数据库上执行SQL查询并返回 <a class="mod" href="../ElunaQuery/index.html">ElunaQuery</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='bit_and.html'>bit_and</a>
+            </td>
+            <td class='docblock short'>
+                <p>Performs a bitwise AND (a &amp; b).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='bit_lshift.html'>bit_lshift</a>
+            </td>
+            <td class='docblock short'>
+                <p>Performs a bitwise left-shift (a &lt;&lt; b).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='bit_not.html'>bit_not</a>
+            </td>
+            <td class='docblock short'>
+                <p>Performs a bitwise NOT (~a).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='bit_or.html'>bit_or</a>
+            </td>
+            <td class='docblock short'>
+                <p>Performs a bitwise OR (a | b).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='bit_rshift.html'>bit_rshift</a>
+            </td>
+            <td class='docblock short'>
+                <p>Performs a bitwise right-shift (a &gt;&gt; b).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='bit_xor.html'>bit_xor</a>
+            </td>
+            <td class='docblock short'>
+                <p>Performs a bitwise XOR (a ^ b).</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

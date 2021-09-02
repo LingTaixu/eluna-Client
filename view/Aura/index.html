@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Aura class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>Aura - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">光环 Aura</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>使用 <a class="mod" href="../Spell/index.html">Spell</a> 后保留在 <a class="mod" href="../Unit/index.html">Unit</a> 上的 <a class="mod" href="../Spell/index.html">Spell</a>效果.</p>
+<p>例如，在目标身上施放一段持续性伤害法术，则<a class="mod" href="../Aura/index.html">Aura</a> 会放置在目标身上，并持续造成伤害</p>
+<p><a class="mod" href="../Aura/index.html">Aura</a>在游戏中显示为小地图左侧的一系列图标。从下方继承：</p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAuraId.html'>GetAuraId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回应用此 <a class="mod" href="../Aura/index.html">Aura</a> <a class="mod" href="../Spell/index.html">Spell</a>的法术ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCaster.html'>GetCaster</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回施放导致该 <a class="mod" href="../Aura/index.html">Aura</a> 被应用的 <a class="mod" href="../Spell/index.html">Spell</a> 的 <a class="mod" href="../Unit/index.html">Unit</a> .</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCasterGUID.html'>GetCasterGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回施放导致此 <a class="mod" href="../Aura/index.html"> Aura</a>被应用的 <a class="mod" href="../Spell/index.html">Spell</a> 的 <a class="mod" href="../Unit/index.html">Unit</a> 的GUID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCasterLevel.html'>GetCasterLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回施放导致应用此 <a class="mod" href="../Aura/index.html">Aura</a> 的 <a class="mod" href="../Spell/index.html">Spell</a> 的 <a class="mod" href="../Unit/index.html">Unit</a> 的等级.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDuration.html'>GetDuration</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Aura/index.html">Aura</a> 到期之前剩余的时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxDuration.html'>GetMaxDuration</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Aura/index.html">Aura</a> 在应用时持续的时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetOwner.html'>GetOwner</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回已应用此 <a class="mod" href="../Aura/index.html">Aura</a> 的 <a class="mod" href="../Unit/index.html">Unit</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetStackAmount.html'>GetStackAmount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Aura/index.html">Aura</a> 的 "叠加" 次数.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Remove.html'>Remove</a>
+            </td>
+            <td class='docblock short'>
+                <p>从<a class="mod" href="../Unit/index.html">Unit</a>上删除此 <a class="mod" href="../Aura/index.html">Aura</a> 效果.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetDuration.html'>SetDuration</a>
+            </td>
+            <td class='docblock short'>
+                <p>修改 <a class="mod" href="../Aura/index.html">Aura</a> 结束前的持续时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetMaxDuration.html'>SetMaxDuration</a>
+            </td>
+            <td class='docblock short'>
+                <p>修改 <a class="mod" href="../Aura/index.html">Aura</a> 的最大持续时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetStackAmount.html'>SetStackAmount</a>
+            </td>
+            <td class='docblock short'>
+                <p>更改 <a class="mod" href="../Aura/index.html">Aura</a> 在 <a class="mod" href="../Unit/index.html">Unit</a> 上"堆叠"次数.</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the BattleGround class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>BattleGround - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">战场 BattleGround</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>包含战场状态，例如 战歌峡谷，阿拉希盆地等 从下方继承：</p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAlivePlayersCountByTeam.html'>GetAlivePlayersCountByTeam</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过团队ID返回 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 中存活的玩家数量.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBonusHonorFromKillCount.html'>GetBonusHonorFromKillCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回在特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 杀敌所给予荣誉奖励(可能翻译不准).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBracketId.html'>GetBracketId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的 bracket ID (bracket = 括号?).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetEndTime.html'>GetEndTime</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的结束时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetFreeSlotsForTeam.html'>GetFreeSlotsForTeam</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 中所选团队的可用空位数量 .</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetInstanceId.html'>GetInstanceId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的实例ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMap.html'>GetMap</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的 <a class="mod" href="../Map/index.html">Map</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMapId.html'>GetMapId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的地图ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxLevel.html'>GetMaxLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 所允许的最高 <a class="mod" href="../Player/index.html">Player</a> 等级.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxPlayers.html'>GetMaxPlayers</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 所允许的最大 <a class="mod" href="../Player/index.html">Player</a> 数.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxPlayersPerTeam.html'>GetMaxPlayersPerTeam</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的每个团队所允许的最大 <a class="mod" href="../Player/index.html">Player</a> 数.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMinLevel.html'>GetMinLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 所允许的最低 <a class="mod" href="../Player/index.html">Player</a> 等级.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMinPlayers.html'>GetMinPlayers</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 所允许的最小 <a class="mod" href="../Player/index.html">Player</a> 数.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMinPlayersPerTeam.html'>GetMinPlayersPerTeam</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的每个团队所允许的最小 <a class="mod" href="../Player/index.html">Player</a> 数.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetName.html'>GetName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的名字.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetStatus.html'>GetStatus</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的状态.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetTypeId.html'>GetTypeId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的类型ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetWinner.html'>GetWinner</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回特定 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 的获胜团队 .</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

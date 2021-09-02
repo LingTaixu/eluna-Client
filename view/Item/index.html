@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Item class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>Item - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">物品 Item</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>Inherits all methods from: <a class="mod" href="../Object/index.html">Object</a></p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanBeTraded.html'>CanBeTraded</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 可被交易,则返回'true' 否则返回'false'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearEnchantment.html'>ClearEnchantment</a>
+            </td>
+            <td class='docblock short'>
+                <p>移除 <a class="mod" href="../Item/index.html">Item</a> 上指定插槽上的附魔</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAllowableClass.html'>GetAllowableClass</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回允许使用此 <a class="mod" href="../Item/index.html">Item</a> 的 <a class="mod" href="../Player/index.html">Player</a> 类 </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAllowableRace.html'>GetAllowableRace</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回允许使用此 <a class="mod" href="../Item/index.html">Item</a> 的 <a class="mod" href="../Player/index.html">Player</a> 种族 </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBagSize.html'>GetBagSize</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Item/index.html">Item</a>, 容器大小，此 <a class="mod" href="../Item/index.html">Item</a> 不是容器则返回 0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBagSlot.html'>GetBagSlot</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 在当前容器中的位置</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBuyCount.html'>GetBuyCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的默认购买数</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBuyPrice.html'>GetBuyPrice</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的购买价格</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetClass.html'>GetClass</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的类</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCount.html'>GetCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的堆栈数（可能有误）</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDisplayId.html'>GetDisplayId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的显示ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetEnchantmentId.html'>GetEnchantmentId</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过指定的附魔插槽返回 <a class="mod" href="../Item/index.html">Item</a> 上的附魔ID </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetInventoryType.html'>GetInventoryType</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 库存类型 （可能有误）</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetItemLevel.html'>GetItemLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a>s 的等级</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetItemLink.html'>GetItemLink</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the chat link of the <a class="mod" href="../Item/index.html">Item</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetItemSet.html'>GetItemSet</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 项目集ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxStackCount.html'>GetMaxStackCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 最大堆栈数（可能有误）</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetName.html'>GetName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetOwner.html'>GetOwner</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回当前拥有该 <a class="mod" href="../Item/index.html">Item</a> 的 <a class="mod" href="../Player/index.html">Player</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='fn' href='GetOwnerGUID.html'>GetOwnerGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetQuality.html'>GetQuality</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的品质</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRandomProperty.html'>GetRandomProperty</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的随机属性ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='fn' href='GetRandomSuffix.html'>GetRandomSuffix</a>
+            </td>
+            <td class='docblock short'>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRequiredLevel.html'>GetRequiredLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回使用此 <a class="mod" href="../Item/index.html">Item</a> 所需的等级</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSellPrice.html'>GetSellPrice</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的售价</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSlot.html'>GetSlot</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 所在的当前位置</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSpellId.html'>GetSpellId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回按咒语索引绑定到 <a class="mod" href="../Item/index.html">Item</a> 的咒语ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSpellTrigger.html'>GetSpellTrigger</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回按咒语索引绑定到 <a class="mod" href="../Item/index.html">Item</a> 的咒语触发器</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='fn' href='GetStatsCount.html'>GetStatsCount</a>
+            </td>
+            <td class='docblock short'>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSubClass.html'>GetSubClass</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Item/index.html">Item</a> 的子类</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasQuest.html'>HasQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 具有指定的 <a class="mod" href="../Quest/index.html">Quest</a> 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsArmorVellum.html'>IsArmorVellum</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 是盔甲 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBag.html'>IsBag</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 是容器（背包、袋子） 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBoundAccountWide.html'>IsBoundAccountWide</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 绑定了账户 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBoundByEnchant.html'>IsBoundByEnchant</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 是由附魔绑定到 <a class="mod" href="../Player/index.html">Player</a> 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBroken.html'>IsBroken</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 已经损坏 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsConjuredConsumable.html'>IsConjuredConsumable</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 是可被消耗的 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsCurrencyToken.html'>IsCurrencyToken</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 是货币 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsEquipped.html'>IsEquipped</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果当前已装该 <a class="mod" href="../Item/index.html">Item</a> 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInBag.html'>IsInBag</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 在包装袋中 则返回 'true' 否则返回 'false' （可能有误）</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInTrade.html'>IsInTrade</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 在交易窗中 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsLocked.html'>IsLocked</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 已被锁定 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsNotBoundToPlayer.html'>IsNotBoundToPlayer</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 未绑定指定 <a class="mod" href="../Player/index.html">Player</a> 则返回 'true' 否则返回 'false'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsNotEmptyBag.html'>IsNotEmptyBag</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 不是空袋子 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsPotion.html'>IsPotion</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 是药水 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsSoulBound.html'>IsSoulBound</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 已被绑定 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsWeaponVellum.html'>IsWeaponVellum</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Item/index.html">Item</a> 是武器 则返回 'true' 否则返回 'false' </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SaveToDB.html'>SaveToDB</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Item/index.html">Item</a> 保存到数据库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetBinding.html'>SetBinding</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Item/index.html">Item</a> 的绑定设置为 'true' 或 'false'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetCount.html'>SetCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Item/index.html">Item</a> 的堆栈数（可能有误）</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetEnchantment.html'>SetEnchantment</a>
+            </td>
+            <td class='docblock short'>
+                <p>在 <a class="mod" href="../Item/index.html">Item</a> 指定附魔插槽上设置指定的附魔</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetOwner.html'>SetOwner</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Item/index.html">Item</a> 的所有者设置为指定 <a class="mod" href="../Player/index.html">Player</a></p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

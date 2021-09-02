@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Creature class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>Creature - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">生物 Creature</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>非 <a class="mod" href="../Player/index.html">Player</a> 控制的 <a class="mod" href="../Unit/index.html">Unit</a> (即NPC).从以下对象继承所有方法 <a class="mod" href="../Object/index.html">Object</a>, <a class="mod" href="../WorldObject/index.html">WorldObject</a>, <a class="mod" href="../Unit/index.html">Unit</a></p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddLootMode.html'>AddLootMode</a>
+            </td>
+            <td class='docblock short'>
+                <p>将战利品模板添加到 <a class="mod" href="../Creature/index.html">Creature</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AttackStart.html'>AttackStart</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Creature/index.html">Creature</a> 攻击目标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CallAssistance.html'>CallAssistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Creature/index.html">Creature</a> 向附近其他 <a class="mod" href="../Creature/index.html">Creature</a> 寻求协助</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CallForHelp.html'>CallForHelp</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Creature/index.html">Creature</a> 向附近其他友善的 <a class="mod" href="../Creature/index.html">Creature</a> 寻求战斗协助</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanAggro.html'>CanAggro</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以攻击附近的敌对 <a class="mod" href="../Unit/index.html">Unit</a> ，则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanAssistTo.html'>CanAssistTo</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以帮助友方对抗敌人，则返回true，否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanCompleteQuest.html'>CanCompleteQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> completes the <a class="mod" href="../Quest/index.html">Quest</a> with the ID <code>questID</code>,
+  and returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanFly.html'>CanFly</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以飞行，则返回true，否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanStartAttack.html'>CanStartAttack</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以开始攻击指定目标，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanSwim.html'>CanSwim</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以水中移动，则返回true，否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanWalk.html'>CanWalk</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以在陆地上移动，则返回true，否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='DespawnOrUnsummon.html'>DespawnOrUnsummon</a>
+            </td>
+            <td class='docblock short'>
+                <p>清除此 <a class="mod" href="../Creature/index.html">Creature</a>.(可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='FleeToGetAssistance.html'>FleeToGetAssistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Creature/index.html">Creature</a> 逃离战斗以获得附近友方 <a class="mod" href="../Creature/index.html">Creature</a> 的协助.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAIName.html'>GetAIName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Creature/index.html">Creature</a> 所使用的AI名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAITarget.html'>GetAITarget</a>
+            </td>
+            <td class='docblock short'>
+                <p>根据提供的参数从 <a class="mod" href="../Creature/index.html">Creature</a> 的威胁列表中返回目标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAITargets.html'>GetAITargets</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Creature/index.html">Creature</a> 威胁列表中的所有 <a class="mod" href="../Unit/index.html">Unit</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAITargetsCount.html'>GetAITargetsCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Creature/index.html">Creature</a> 威胁列表中的 <a class="mod" href="../Unit/index.html">Unit</a> 数量.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAggroRange.html'>GetAggroRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的目标的仇恨范围.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAttackDistance.html'>GetAttackDistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回目标 <a class="mod" href="../Creature/index.html">Creature</a> 的有效仇恨范围.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCorpseDelay.html'>GetCorpseDelay</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 死亡与尸体消失之间的延迟时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCreatureFamily.html'>GetCreatureFamily</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的生物家族分类ID (在 CreatureFamily.dbc 中枚举).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCreatureSpellCooldownDelay.html'>GetCreatureSpellCooldownDelay</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的指定法术ID的冷却时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCurrentWaypointId.html'>GetCurrentWaypointId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的当前航点ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDBTableGUIDLow.html'>GetDBTableGUIDLow</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Creature/index.html">Creature</a> 在数据库中用作ID的GUID.(可能是此ID生物的GUID)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDefaultMovementType.html'>GetDefaultMovementType</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Creature/index.html">Creature</a> 的默认移动类型 .</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetHomePosition.html'>GetHomePosition</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 脱离战斗或重生时的坐标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='fn' href='GetLootMode.html'>GetLootMode</a>
+            </td>
+            <td class='docblock short'>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLootRecipient.html'>GetLootRecipient</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回能掠夺此 <a class="mod" href="../Creature/index.html">Creature</a> 的 <a class="mod" href="../Player/index.html">Player</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLootRecipientGroup.html'>GetLootRecipientGroup</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回能掠夺此 <a class="mod" href="../Creature/index.html">Creature</a> 的 <a class="mod" href="../Group/index.html">Group</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetNPCFlags.html'>GetNPCFlags</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的NPC标志.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRespawnDelay.html'>GetRespawnDelay</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回此 <a class="mod" href="../Creature/index.html">Creature</a> 被死亡后重生所需的时间</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetScriptId.html'>GetScriptId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的脚本ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetScriptName.html'>GetScriptName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的脚本名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetShieldBlockValue.html'>GetShieldBlockValue</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的盾牌格挡值.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetWanderRadius.html'>GetWanderRadius</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 以重生点起的随机移动半径.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetWaypointPath.html'>GetWaypointPath</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Creature/index.html">Creature</a> 的当前航点的路径ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasCategoryCooldown.html'>HasCategoryCooldown</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> cannot cast <code>spellId</code> due to a category cooldown,
+  and returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasLootMode.html'>HasLootMode</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 具有指定的战利品模板 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasLootRecipient.html'>HasLootRecipient</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 将其战利品掉落给玩家或团队 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasQuest.html'>HasQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> starts the <a class="mod" href="../Quest/index.html">Quest</a> <code>questId</code>,
+  and returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasSearchedAssistance.html'>HasSearchedAssistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 开始寻找战斗援助 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasSpell.html'>HasSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 被心灵控制时可以施法指定法术ID的法术 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasSpellCooldown.html'>HasSpellCooldown</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 的指定法术ID正在冷却时 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsCivilian.html'>IsCivilian</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 是一个平民 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsDamageEnoughForLootingAndReward.html'>IsDamageEnoughForLootingAndReward</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 生命损失程度达到可以掠夺的程度 则返回true 否则返回false (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsElite.html'>IsElite</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 是精英或稀有精英 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsGuard.html'>IsGuard</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 是城市守卫 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInEvadeMode.html'>IsInEvadeMode</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 脱离战斗并返回 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsRacialLeader.html'>IsRacialLeader</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 是玩家阵营领袖 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsReputationGainDisabled.html'>IsReputationGainDisabled</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 被杀死时不给予声望 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsTappedBy.html'>IsTappedBy</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以掉落战利品给 <a class="mod" href="../Player/index.html">Player</a> 则返回true 否则返回false (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsTargetableForAttack.html'>IsTargetableForAttack</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 可以被攻击 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsTrigger.html'>IsTrigger</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 是触发器 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsWorldBoss.html'>IsWorldBoss</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Creature/index.html">Creature</a> 是BOSS 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveWaypoint.html'>MoveWaypoint</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Creature/index.html">Creature</a> 跟随其航点路径开始移动.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveCorpse.html'>RemoveCorpse</a>
+            </td>
+            <td class='docblock short'>
+                <p>清除此 <a class="mod" href="../Creature/index.html">Creature</a> 的尸体.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveLootMode.html'>RemoveLootMode</a>
+            </td>
+            <td class='docblock short'>
+                <p>从生物上 <a class="mod" href="../Creature/index.html">Creature</a> 移除指定的战利品模板</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ResetLootMode.html'>ResetLootMode</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Creature/index.html">Creature</a> 的战利品模板重置为默认值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Respawn.html'>Respawn</a>
+            </td>
+            <td class='docblock short'>
+                <p>重生此 <a class="mod" href="../Creature/index.html">Creature</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SaveToDB.html'>SaveToDB</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Creature/index.html">Creature</a> 保存至数据库中.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SelectVictim.html'>SelectVictim</a>
+            </td>
+            <td class='docblock short'>
+                <p>让 <a class="mod" href="../Creature/index.html">Creature</a> 尝试寻找新的目标.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetAggroEnabled.html'>SetAggroEnabled</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置是否可以对 <a class="mod" href="../Creature/index.html">Creature</a> 产生仇恨.(可能是生物是否可以产生仇恨)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetDeathState.html'>SetDeathState</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Creature/index.html">Creature</a>的死亡状态设置为 死亡状态.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetDefaultMovementType.html'>SetDefaultMovementType</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 的默认移动类型.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetDisableGravity.html'>SetDisableGravity</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Creature/index.html">Creature</a> 能够飞行(如果启用).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetDisableReputationGain.html'>SetDisableReputationGain</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 是否可以给予声望.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetEquipmentSlots.html'>SetEquipmentSlots</a>
+            </td>
+            <td class='docblock short'>
+                <p>为 <a class="mod" href="../Unit/index.html">Unit</a> 装备指定的 <a class="mod" href="../Item/index.html">Item</a>，如果指定为0则删除装备的 <a class="mod" href="../Item/index.html">Item</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetHomePosition.html'>SetHomePosition</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 脱离战斗或重生时返回的坐标.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetHover.html'>SetHover</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置生物 随机移动/原地不动 (应该是非战斗状态下)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetInCombatWithZone.html'>SetInCombatWithZone</a>
+            </td>
+            <td class='docblock short'>
+                <p>与此 <a class="mod" href="../Creature/index.html">Creature</a> 交战时，将副本中所有的 <a class="mod" href="../Player/index.html">Player</a> 当前状态设为战斗中.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='fn' href='SetLootMode.html'>SetLootMode</a>
+            </td>
+            <td class='docblock short'>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetNPCFlags.html'>SetNPCFlags</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Creature/index.html">Creature</a> 的NPC标志设置为flags.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetNoCallAssistance.html'>SetNoCallAssistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 是否可以在战斗中呼叫附近的敌人以寻求协助.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetNoSearchAssistance.html'>SetNoSearchAssistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 是否可以在生命过低时寻求协助.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetRespawnDelay.html'>SetRespawnDelay</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 死亡后重生所需的时间.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetWalk.html'>SetWalk</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 当前使用行走还是在跑步.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetWanderRadius.html'>SetWanderRadius</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Creature/index.html">Creature</a> 从其重生点的随机移动半径.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='UpdateEntry.html'>UpdateEntry</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Creature/index.html">Creature</a> 转换为另一个生物.</p>
+            </td>
+        </tr>
+    </table>
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

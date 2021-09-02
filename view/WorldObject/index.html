@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the WorldObject class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>WorldObject - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">WorldObject</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>从以下继承所有方法: <a class="mod" href="../Object/index.html">Object</a></p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAngle.html'>GetAngle</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 与另一 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 或一个点之间的角度</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAreaId.html'>GetAreaId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前区域ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCreaturesInRange.html'>GetCreaturesInRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 或给定范围内具有特定条目ID的 <a class="mod" href="../Creature/index.html">Creature</a> 对象表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDistance.html'>GetDistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到另一 <a class="mod" href="../WorldObject/index.html">WorldObject</a>, 或从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到3d空间中的点的距离</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDistance2d.html'>GetDistance2d</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到另一 <a class="mod" href="../WorldObject/index.html">WorldObject</a>, 或从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到2d空间中的点的距离</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetExactDistance.html'>GetExactDistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到另一 <a class="mod" href="../WorldObject/index.html">WorldObject</a>, 或从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到3d空间中的点的距离</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetExactDistance2d.html'>GetExactDistance2d</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到另一 <a class="mod" href="../WorldObject/index.html">WorldObject</a>, 或从此 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 到2d空间中的点的距离</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGameObjectsInRange.html'>GetGameObjectsInRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns a table of <a class="mod" href="../GameObject/index.html">GameObject</a> objects in sight of the <a class="mod" href="../WorldObject/index.html">WorldObject</a> or within the given range and/or with a specific entry ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetInstanceId.html'>GetInstanceId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前实例ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLocation.html'>GetLocation</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 坐标和方向</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMap.html'>GetMap</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前 <a class="mod" href="../Map/index.html">Map</a> 对象</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMapId.html'>GetMapId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前地图ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetName.html'>GetName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetNearObject.html'>GetNearObject</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回最接近 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 的 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 必须匹配距离，类型，条目和敌对性要求 </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetNearObjects.html'>GetNearObjects</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns a table of <a class="mod" href="../WorldObject/index.html">WorldObject</a>s in sight of the <a class="mod" href="../WorldObject/index.html">WorldObject</a>.
+The distance, type, entry and hostility requirements the <a class="mod" href="../WorldObject/index.html">WorldObject</a> must match can be passed.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetNearestCreature.html'>GetNearestCreature</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 指定范围内和/或具有特定条目ID的最近的<a class="mod" href="../Creature/index.html">Creature</a> 对象(可能是视线范围)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetNearestGameObject.html'>GetNearestGameObject</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回最近的 <a class="mod" href="../GameObject/index.html">GameObject</a> 在视线物体 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 或指定范围内或特定条目ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetNearestPlayer.html'>GetNearestPlayer</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 或指定范围内最近的 <a class="mod" href="../Player/index.html">Player</a> 对象</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetO.html'>GetO</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前方向</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPhaseMask.html'>GetPhaseMask</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前阶段</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayersInRange.html'>GetPlayersInRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 或指定范围内 <a class="mod" href="../Player/index.html">Player</a> 对象表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRelativePoint.html'>GetRelativePoint</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回远离 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 点的X,Y,Z</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetX.html'>GetX</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前X坐标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetY.html'>GetY</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前Y坐标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetZ.html'>GetZ</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前Z坐标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetZoneId.html'>GetZoneId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 当前区域ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInBack.html'>IsInBack</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果目标在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 之后的指定弧线中，则返回true (有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInFront.html'>IsInFront</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果目标在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 指定弧线上，则返回true (有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInMap.html'>IsInMap</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 在同一地图上，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInRange.html'>IsInRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果目标在给定范围内，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInRange2d.html'>IsInRange2d</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果目标在给定范围内，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInRange3d.html'>IsInRange3d</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果目标在给定范围内，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsWithinDist.html'>IsWithinDist</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果该点在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 的给定距离内，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsWithinDist2d.html'>IsWithinDist2d</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果该点在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 的给定距离内，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsWithinDist3d.html'>IsWithinDist3d</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果该点在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 的给定距离内，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsWithinDistInMap.html'>IsWithinDistInMap</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 在同一地图上且在给定距离内，则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsWithinLoS.html'>IsWithinLoS</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果指定 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 或坐标在 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 视线范围内 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='PlayDirectSound.html'>PlayDirectSound</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 对附近 <a class="mod" href="../Player/index.html">Player</a> 播放声音</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='PlayDistanceSound.html'>PlayDistanceSound</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 对附近 <a class="mod" href="../Player/index.html">Player</a> 播放声音</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='PlayMusic.html'>PlayMusic</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 对附近 <a class="mod" href="../Player/index.html">Player</a> 播放声音</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RegisterEvent.html'>RegisterEvent</a>
+            </td>
+            <td class='docblock short'>
+                <p>Registers a timed event to the <a class="mod" href="../WorldObject/index.html">WorldObject</a>
+When the passed function is called, the parameters <code>(eventId, delay, repeats, worldobject)</code> are passed to it.
+Repeats will decrease on each call if the event does not repeat indefinitely</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveEventById.html'>RemoveEventById</a>
+            </td>
+            <td class='docblock short'>
+                <p>通过指定的事件ID从 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 删除定时事件</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveEvents.html'>RemoveEvents</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 删除所有定时事件</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendPacket.html'>SendPacket</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 发送至 <a class="mod" href="../Player/index.html">Player</a> 让其看到 <a class="mod" href="../WorldObject/index.html">WorldObject</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetPhaseMask.html'>SetPhaseMask</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../WorldObject/index.html">WorldObject</a> 相位掩码</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SpawnCreature.html'>SpawnCreature</a>
+            </td>
+            <td class='docblock short'>
+                <p>在指定位置生成生物</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SummonGameObject.html'>SummonGameObject</a>
+            </td>
+            <td class='docblock short'>
+                <p>在指定位置生成一个 <a class="mod" href="../GameObject/index.html">GameObject</a></p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

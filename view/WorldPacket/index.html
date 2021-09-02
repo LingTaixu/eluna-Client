@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the WorldPacket class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>WorldPacket - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">数据 WorldPacket</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>用于在服务器和客户端之间传递消息的包。数据包可以包含很多数据，其格式取决于操作码</p>
+<p>每个包都有一个操作码来决定发送消息的类型，例如，客户端发送了一个CMSG_LOGOUT_REQUEST包到服务器，表示 <a class="mod" href="../Player/index.html">Player</a> 想要注销 (大致是这个意思)  从以下方法继承: none 无</p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetOpcode.html'>GetOpcode</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 的操作码</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSize.html'>GetSize</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 的大小</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadByte.html'>ReadByte</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个带符号的8位整数值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadDouble.html'>ReadDouble</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个双精度浮点值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadFloat.html'>ReadFloat</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回单精度浮点值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadGUID.html'>ReadGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个无符号的64位整数值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadLong.html'>ReadLong</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个带符号的32位整数值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadShort.html'>ReadShort</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个带符号的16位整数值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadString.html'>ReadString</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个字符串值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadUByte.html'>ReadUByte</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个无符号的8位整数值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadULong.html'>ReadULong</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 读取并返回一个无符号的32位整数值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadUShort.html'>ReadUShort</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 取并返回一个无符号的16位整数值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetOpcode.html'>SetOpcode</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 的操作码为指定的操作码</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteByte.html'>WriteByte</a>
+            </td>
+            <td class='docblock short'>
+                <p>将带符号的8位整数值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteDouble.html'>WriteDouble</a>
+            </td>
+            <td class='docblock short'>
+                <p>将64位浮点值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteFloat.html'>WriteFloat</a>
+            </td>
+            <td class='docblock short'>
+                <p>将32位浮点值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteGUID.html'>WriteGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>将无符号的64位整数值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteLong.html'>WriteLong</a>
+            </td>
+            <td class='docblock short'>
+                <p>将带符号的32位整数值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteShort.html'>WriteShort</a>
+            </td>
+            <td class='docblock short'>
+                <p>将带符号的16位整数值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteString.html'>WriteString</a>
+            </td>
+            <td class='docblock short'>
+                <p>将字符串写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteUByte.html'>WriteUByte</a>
+            </td>
+            <td class='docblock short'>
+                <p>将无符号的8位整数值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteULong.html'>WriteULong</a>
+            </td>
+            <td class='docblock short'>
+                <p>将无符号的32位整数值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WriteUShort.html'>WriteUShort</a>
+            </td>
+            <td class='docblock short'>
+                <p>将无符号的16位整数值写入 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

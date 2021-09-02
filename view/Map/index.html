@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Map class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>Map - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">地图 Map</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>游戏地图，例如 艾泽拉斯，东方王国，熔火之心等 从以下方法继承</p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAreaId.html'>GetAreaId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回指定X、Y和Z坐标处的<a class="mod" href="../Map/index.html">Map</a> 区域ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDifficulty.html'>GetDifficulty</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Map/index.html">Map</a> 的难度</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetHeight.html'>GetHeight</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Map/index.html">Map</a> 指定X和Y坐标处的高度</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetInstanceData.html'>GetInstanceData</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Map/index.html">Map</a> 的实例数据表, 如果存在</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetInstanceId.html'>GetInstanceId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Map/index.html">Map</a> 的实例ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMapId.html'>GetMapId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Map/index.html">Map</a> 的ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetName.html'>GetName</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Map/index.html">Map</a> 的名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayerCount.html'>GetPlayerCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回当前在 <a class="mod" href="../Map/index.html">Map</a> 上的玩家人数，不包括GM.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPlayers.html'>GetPlayers</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回一个表，其中包含地图中的所有当前 <a class="mod" href="../Player/index.html">Player</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetWorldObject.html'>GetWorldObject</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果已重生，则通过其GUID从地图返回 <a class="mod" href="../WorldObject/index.html">WorldObject</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsArena.html'>IsArena</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Map/index.html">Map</a> 是竞技场 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBattleground.html'>IsBattleground</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Map/index.html">Map</a> 非竞技场 <a class="mod" href="../BattleGround/index.html">BattleGround</a> 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsDungeon.html'>IsDungeon</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <code>true</code> if the <a class="mod" href="../Map/index.html">Map</a> 是地下城副本 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsEmpty.html'>IsEmpty</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Map/index.html">Map</a> 中没有 <a class="mod" href="../Player/index.html">Player</a> 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsHeroic.html'>IsHeroic</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Map/index.html">Map</a> 难度为英雄 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsRaid.html'>IsRaid</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Map/index.html">Map</a> 为团队副本 则返回true 否则返回false</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SaveInstanceData.html'>SaveInstanceData</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Map/index.html">Map</a> 的实例数据保存到数据库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetWeather.html'>SetWeather</a>
+            </td>
+            <td class='docblock short'>
+                <p>天气设置可有可无</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

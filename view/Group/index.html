@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Group class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>Group - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">团队 Group</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>从以下对象继承: none 无</p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddMember.html'>AddMember</a>
+            </td>
+            <td class='docblock short'>
+                <p>添加新成员到 <a class="mod" href="../Group/index.html">Group</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ConvertToRaid.html'>ConvertToRaid</a>
+            </td>
+            <td class='docblock short'>
+                <p>将此 <a class="mod" href="../Group/index.html">Group</a> 转换为 <a class="mod" href="../Group/index.html">Group</a> (应该是将队伍转换为团队)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Disband.html'>Disband</a>
+            </td>
+            <td class='docblock short'>
+                <p>解散此 <a class="mod" href="../Group/index.html">Group</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGUID.html'>GetGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Group/index.html">Group</a>的 GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLeaderGUID.html'>GetLeaderGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Group/index.html">Group</a> 队长 GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMemberGUID.html'>GetMemberGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Group/index.html">Group</a> 成员的GUID 按名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMemberGroup.html'>GetMemberGroup</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Player/index.html">Player</a>所在 <a class="mod" href="../Group/index.html">Group</a>的子组ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMembers.html'>GetMembers</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回一个包含此 <a class="mod" href="../Group/index.html">Group</a> <a class="mod" href="../Player/index.html">Player</a> 的表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMembersCount.html'>GetMembersCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Group/index.html">Group</a> 队员数量</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasFreeSlotSubGroup.html'>HasFreeSlotSubGroup</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Group/index.html">Group</a>的子组中有空位 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsAssistant.html'>IsAssistant</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果此 <a class="mod" href="../Player/index.html">Player</a> 是 <a class="mod" href="../Group/index.html">Group</a> 的助理 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBGGroup.html'>IsBGGroup</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果此 <a class="mod" href="../Group/index.html">Group</a> 是战场中的 <a class="mod" href="../Group/index.html">Group</a> 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsFull.html'>IsFull</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果此 <a class="mod" href="../Group/index.html">Group</a> 已满 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsLeader.html'>IsLeader</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果此 <a class="mod" href="../Player/index.html">Player</a> 是 <a class="mod" href="../Group/index.html">Group</a> 领袖 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsMember.html'>IsMember</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果此 <a class="mod" href="../Player/index.html">Player</a> 是 <a class="mod" href="../Group/index.html">Group</a> 队员 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsRaidGroup.html'>IsRaidGroup</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果此 <a class="mod" href="../Group/index.html">Group</a> 是一个副本 <a class="mod" href="../Group/index.html">Group</a> 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveMember.html'>RemoveMember</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../Group/index.html">Group</a> 踢出 指定的 <a class="mod" href="../Player/index.html">Player </a> 如果成功则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SameSubGroup.html'>SameSubGroup</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果此 <a class="mod" href="../Player/index.html">Player</a>处于该 <a class="mod" href="../Group/index.html">Group</a> 的同一子组中 则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendPacket.html'>SendPacket</a>
+            </td>
+            <td class='docblock short'>
+                <p>将指定 <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> 发送到 <a class="mod" href="../Group/index.html">Group</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetLeader.html'>SetLeader</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Group/index.html">Group</a> 的队长</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetMembersGroup.html'>SetMembersGroup</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置队员的子组</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetTargetIcon.html'>SetTargetIcon</a>
+            </td>
+            <td class='docblock short'>
+                <p>为 <a class="mod" href="../Group/index.html">Group</a>设置图标</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

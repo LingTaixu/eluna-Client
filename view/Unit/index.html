@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Unit class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, trinitycore, trinity, mangos, cmangos, script, scripting, doc, docs, documentation">
+
+    <title>Unit - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+		<section class="sidebar">
+			<a href='../index.html'>
+				<img src='../static/eluna-logo.png' alt='Eluna Logo' width='50'>
+			</a>
+			<div class="block">
+				<h2>所有大类</h2>
+				<a class="mod " href="../Aura/index.html">光环 Aura</a>
+				<a class="mod " href="../BattleGround/index.html">战场 BattleGround</a>
+				<a class="mod " href="../Corpse/index.html">尸体 Corpse</a>
+				<a class="mod " href="../Creature/index.html">生物 Creature</a>
+				<a class="mod " href="../ElunaQuery/index.html">查询 ElunaQuery</a>
+				<a class="mod " href="../GameObject/index.html">游戏对象 GameObject</a>
+				<a class="mod " href="../Global/index.html">全局 Global</a>
+				<a class="mod " href="../Group/index.html">团队 Group</a>
+				<a class="mod " href="../Guild/index.html">公会 Guild</a>
+				<a class="mod " href="../Item/index.html">物品 Item</a>
+				<a class="mod " href="../Map/index.html">地图 Map</a>
+				<a class="mod " href="../Object/index.html">对象 Object</a>
+				<a class="mod " href="../Player/index.html">玩家 Player</a>
+				<a class="mod " href="../Quest/index.html">任务 Quest</a>
+				<a class="mod " href="../Spell/index.html">法术 Spell</a>
+				<a class="mod " href="../Unit/index.html">单位 Unit</a>
+				<a class="mod " href="../Vehicle/index.html">载具 Vehicle</a>
+				<a class="mod " href="../WorldObject/index.html">世界对象 WorldObject</a>
+				<a class="mod " href="../WorldPacket/index.html">数据 WorldPacket</a>
+			</div>
+		</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="搜索更多内容"
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        分类：<a class="mod" href="">Unit</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>继承所有方法: <a class="mod" href="../Object/index.html">Object</a>, <a class="mod" href="../WorldObject/index.html">WorldObject</a></p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">方法</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddAura.html'>AddAura</a>
+            </td>
+            <td class='docblock short'>
+                <p>为 <a class="mod" href="../Aura/index.html">Aura</a> 的指定目标添加指定法术条目的 <a class="mod" href="../Unit/index.html">Unit</a> (不太准确)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddThreat.html'>AddThreat</a>
+            </td>
+            <td class='docblock short'>
+                <p>给受害者增加对 <a class="mod" href="../Unit/index.html">Unit</a> 的威胁</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddUnitState.html'>AddUnitState</a>
+            </td>
+            <td class='docblock short'>
+                <p>为 <a class="mod" href="../Unit/index.html">Unit</a> 添加指定unit状态</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Attack.html'>Attack</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 尝试攻击一个指定目标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AttackStop.html'>AttackStop</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 停止攻击目标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CastCustomSpell.html'>CastCustomSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>使用自定义基点或施法者对目标 <a class="mod" href="../Unit/index.html">Unit</a> 施放 <a class="mod" href="../Spell/index.html">Spell</a> 请参见 <a class="fn" href="../Unit/CastSpell.html">Unit:CastSpell</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CastSpell.html'>CastSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 对目标施放咒语</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CastSpellAoF.html'>CastSpellAoF</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 将咒语投射到指定的坐标，用于区域(范围)法术</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearInCombat.html'>ClearInCombat</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 结束战斗(可能是脱离战斗)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearThreatList.html'>ClearThreatList</a>
+            </td>
+            <td class='docblock short'>
+                <p>清空 <a class="mod" href="../Unit/index.html">Unit</a> 的威胁列表(清空威胁)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearUnitState.html'>ClearUnitState</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../Unit/index.html">Unit</a> 删除给定的Unit状态</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CountPctFromCurHealth.html'>CountPctFromCurHealth</a>
+            </td>
+            <td class='docblock short'>
+                <p>从生命返回生命百分比</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CountPctFromMaxHealth.html'>CountPctFromMaxHealth</a>
+            </td>
+            <td class='docblock short'>
+                <p>从最大生命状态返回生命百分比</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='DeMorph.html'>DeMorph</a>
+            </td>
+            <td class='docblock short'>
+                <p>将 <a class="mod" href="../Unit/index.html">Unit</a> 的显示ID恢复为原始显示ID (有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='DealDamage.html'>DealDamage</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 对目标 <a class="mod" href="../Unit/index.html">Unit</a> 造成伤害</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='DealHeal.html'>DealHeal</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 使用指定法术治疗目标 <a class="mod" href="../Unit/index.html">Unit</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Dismount.html'>Dismount</a>
+            </td>
+            <td class='docblock short'>
+                <p><a class="mod" href="../Unit/index.html">Unit</a> (下马？)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Emote.html'>Emote</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 使用指定表情</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='EmoteState.html'>EmoteState</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 连续使用指定的表情</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAura.html'>GetAura</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的指定法术 <a class="mod" href="../Aura/index.html">Aura</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBaseSpellPower.html'>GetBaseSpellPower</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 基础法术强度</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCharmGUID.html'>GetCharmGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的实体GUID (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCharmerGUID.html'>GetCharmerGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的子GUID (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetClass.html'>GetClass</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 类ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetClassAsString.html'>GetClassAsString</a>
+            </td>
+            <td class='docblock short'>
+                <p>使用指定或默认语言环境或nil返回 <a class="mod" href="../Unit/index.html">Unit</a> 的 类 名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetClassMask.html'>GetClassMask</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回类掩码</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetControllerGUID.html'>GetControllerGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the GUID of the <a class="mod" href="../Unit/index.html">Unit</a>'s charmer or owner.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetControllerGUIDS.html'>GetControllerGUIDS</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the GUID of the <a class="mod" href="../Unit/index.html">Unit</a>'s charmer or owner or its own GUID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCreatorGUID.html'>GetCreatorGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 创建者的GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCreatureType.html'>GetCreatureType</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 生物类型ID (枚举 CreatureType.dbc)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCritterGUID.html'>GetCritterGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回小动物的 Guid</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCurrentSpell.html'>GetCurrentSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the currently casted <a class="mod" href="../Spell/index.html">Spell</a> of given type or nil.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDisplayId.html'>GetDisplayId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的当前显示ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetFaction.html'>GetFaction</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 派系(阵营)ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetFriendlyUnitsInRange.html'>GetFriendlyUnitsInRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回一个表格，包含 <a class="mod" href="../Unit/index.html">Unit</a> 在的指定范围内友好 <a class="mod" href="../Unit/index.html">Unit</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetGender.html'>GetGender</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的性别</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetHealth.html'>GetHealth</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的健康(生命)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetHealthPct.html'>GetHealthPct</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的生命百分比</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLevel.html'>GetLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的等级</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxHealth.html'>GetMaxHealth</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 最大生命</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxPower.html'>GetMaxPower</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 指定能量类型的最大值 (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMountId.html'>GetMountId</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 使用的modelID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMovementType.html'>GetMovementType</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 当前移动类型</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetNativeDisplayId.html'>GetNativeDisplayId</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Unit/index.html">Unit</a>'s native/original display ID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetOwner.html'>GetOwner</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的所有者</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetOwnerGUID.html'>GetOwnerGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 所有者的GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPetGUID.html'>GetPetGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 宠物的GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPower.html'>GetPower</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 指定能量类型的能量值 (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPowerPct.html'>GetPowerPct</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 指定能量类型的能量百分比 (可能有误)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPowerType.html'>GetPowerType</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的当前能量类型</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRace.html'>GetRace</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 种族ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRaceAsString.html'>GetRaceAsString</a>
+            </td>
+            <td class='docblock short'>
+                <p>使用指定或默认语言环境或nil返回 <a class="mod" href="../Unit/index.html">Unit</a> 的 种族 名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRaceMask.html'>GetRaceMask</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the race mask</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSpeed.html'>GetSpeed</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回指定 [UnitMoveType] <a class="mod" href="../Unit/index.html">Unit</a> 的速度</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetStandState.html'>GetStandState</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 当前状态</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetStat.html'>GetStat</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 的指定统计信息</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetUnfriendlyUnitsInRange.html'>GetUnfriendlyUnitsInRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回一个表格，包含 <a class="mod" href="../Unit/index.html">Unit</a> 在的指定范围内敌对 <a class="mod" href="../Unit/index.html">Unit</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='fn' href='GetVehicle.html'>GetVehicle</a>
+            </td>
+            <td class='docblock short'>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetVehicleKit.html'>GetVehicleKit</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <a class="mod" href="../Unit/index.html">Unit</a>'s <a class="mod" href="../Vehicle/index.html">Vehicle</a> methods</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetVictim.html'>GetVictim</a>
+            </td>
+            <td class='docblock short'>
+                <p>返回 <a class="mod" href="../Unit/index.html">Unit</a> 当前的受害者目标或nil</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasAura.html'>HasAura</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> has an aura from the given spell entry.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasUnitState.html'>HasUnitState</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 具有指定的 Unit 状态,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HealthAbovePct.html'>HealthAbovePct</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 的生命状态高于指定的百分比,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HealthBelowPct.html'>HealthBelowPct</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 的生命状态低于指定的百分比,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='InterruptSpell.html'>InterruptSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>终止 <a class="mod" href="../Unit/index.html">Unit</a> 的法术状态，施法等</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsAlive.html'>IsAlive</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 处于活动状态,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsArmorer.html'>IsArmorer</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是装甲兵并且可以修理装备,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsAttackingPlayer.html'>IsAttackingPlayer</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 正在攻击玩家,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsAuctioneer.html'>IsAuctioneer</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是拍卖师,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBanker.html'>IsBanker</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是银行,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBattleMaster.html'>IsBattleMaster</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是武器大师,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsCasting.html'>IsCasting</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 正在施放咒语,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsCharmed.html'>IsCharmed</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是带引号的,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsDead.html'>IsDead</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 已死亡,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsDying.html'>IsDying</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 即将死亡,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsFullHealth.html'>IsFullHealth</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 生命状况良好,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsGossip.html'>IsGossip</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 能够显示菜单窗口,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsGuildMaster.html'>IsGuildMaster</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是工会领袖,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInAccessiblePlaceFor.html'>IsInAccessiblePlaceFor</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 在指定 <a class="mod" href="../Creature/index.html">Creature</a> 的可访问位置,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInCombat.html'>IsInCombat</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 在战斗中,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInWater.html'>IsInWater</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 在水中,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsInnkeeper.html'>IsInnkeeper</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是旅店老板,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsMounted.html'>IsMounted</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> is mounted.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsOnVehicle.html'>IsOnVehicle</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 在 <a class="mod" href="../Vehicle/index.html">Vehicle</a> 上,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsPvPFlagged.html'>IsPvPFlagged</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 标记为PvP,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsQuestGiver.html'>IsQuestGiver</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 可以给予任务,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsRooted.html'>IsRooted</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> is rooted.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsServiceProvider.html'>IsServiceProvider</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 可提供买卖，培训和拍卖之类的服务,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsSpiritGuide.html'>IsSpiritGuide</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是精神指导,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsSpiritHealer.html'>IsSpiritHealer</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是精神治疗者,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsSpiritService.html'>IsSpiritService</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是精神向导或精神治疗者,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsStandState.html'>IsStandState</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 站立</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsStopped.html'>IsStopped</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 不动</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsTabardDesigner.html'>IsTabardDesigner</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是战袍设计师,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsTaxi.html'>IsTaxi</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是飞行管理员,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsTrainer.html'>IsTrainer</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是训练师,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsUnderWater.html'>IsUnderWater</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 在水下,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsVendor.html'>IsVendor</a>
+            </td>
+            <td class='docblock short'>
+                <p>如果 <a class="mod" href="../Unit/index.html">Unit</a> 是供应商,则返回true</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Kill.html'>Kill</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 杀死指定 <a class="mod" href="../Unit/index.html">Unit</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ModifyPower.html'>ModifyPower</a>
+            </td>
+            <td class='docblock short'>
+                <p>修改 <a class="mod" href="../Unit/index.html">Unit</a> 的指定能量类型的能量值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Mount.html'>Mount</a>
+            </td>
+            <td class='docblock short'>
+                <p>Mounts the <a class="mod" href="../Unit/index.html">Unit</a> on the given displayID/modelID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveChase.html'>MoveChase</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 追逐指定目标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveClear.html'>MoveClear</a>
+            </td>
+            <td class='docblock short'>
+                <p>停止 <a class="mod" href="../Unit/index.html">Unit</a> 追逐</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveConfused.html'>MoveConfused</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 感到困惑</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveExpire.html'>MoveExpire</a>
+            </td>
+            <td class='docblock short'>
+                <p>The <a class="mod" href="../Unit/index.html">Unit</a>'s movement expires and clears movement</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveFleeing.html'>MoveFleeing</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 将逃跑</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveFollow.html'>MoveFollow</a>
+            </td>
+            <td class='docblock short'>
+                <p>The <a class="mod" href="../Unit/index.html">Unit</a> will follow the target</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveHome.html'>MoveHome</a>
+            </td>
+            <td class='docblock short'>
+                <p>The <a class="mod" href="../Unit/index.html">Unit</a> 移动到其刷新位置</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveIdle.html'>MoveIdle</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> will be idle</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveJump.html'>MoveJump</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 跳到坐标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveRandom.html'>MoveRandom</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 将随机移动</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveStop.html'>MoveStop</a>
+            </td>
+            <td class='docblock short'>
+                <p>停止 <a class="mod" href="../Unit/index.html">Unit</a> 移动</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='MoveTo.html'>MoveTo</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 移动到指定坐标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='NearTeleport.html'>NearTeleport</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 传送到当前地图内指定坐标</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveAllAuras.html'>RemoveAllAuras</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../Unit/index.html">Unit</a> 移除所有的 <a class="mod" href="../Aura/index.html">Aura</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveAura.html'>RemoveAura</a>
+            </td>
+            <td class='docblock short'>
+                <p>从 <a class="mod" href="../Unit/index.html">Unit</a> 移除指定的 <a class="mod" href="../Aura/index.html">Aura</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendChatMessageToPlayer.html'>SendChatMessageToPlayer</a>
+            </td>
+            <td class='docblock short'>
+                <p>发送聊天信息给 <a class="mod" href="../Player/index.html">Player</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendUnitEmote.html'>SendUnitEmote</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 发送表情动作</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendUnitSay.html'>SendUnitSay</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 发送普通消息</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendUnitWhisper.html'>SendUnitWhisper</a>
+            </td>
+            <td class='docblock short'>
+                <p>发送私聊信息给 <a class="mod" href="../Player/index.html">Player</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SendUnitYell.html'>SendUnitYell</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 发送大喊消息</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetConfused.html'>SetConfused</a>
+            </td>
+            <td class='docblock short'>
+                <p>Confuses the <a class="mod" href="../Unit/index.html">Unit</a>, if 'false' specified, the <a class="mod" href="../Unit/index.html">Unit</a> is no longer confused.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetCreatorGUID.html'>SetCreatorGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置创建者GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='fn' href='SetCritterGUID.html'>SetCritterGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetDisplayId.html'>SetDisplayId</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 的 modelID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetFFA.html'>SetFFA</a>
+            </td>
+            <td class='docblock short'>
+                <p>开/关 <a class="mod" href="../Unit/index.html">Unit</a> 的FFA标志</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetFacing.html'>SetFacing</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 的朝向</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetFacingToObject.html'>SetFacingToObject</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> to face the given <a class="mod" href="../WorldObject/index.html">WorldObject</a>'s direction.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetFaction.html'>SetFaction</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 的派系(阵营)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetFeared.html'>SetFeared</a>
+            </td>
+            <td class='docblock short'>
+                <p>Fears the <a class="mod" href="../Unit/index.html">Unit</a>, if 'false' specified, the <a class="mod" href="../Unit/index.html">Unit</a> is no longer feared.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetHealth.html'>SetHealth</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 的生命</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetLevel.html'>SetLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 的等级</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetMaxHealth.html'>SetMaxHealth</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 最大生命值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetMaxPower.html'>SetMaxPower</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 指定能量的最大能量值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetName.html'>SetName</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> (内部名称？)名称</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetNativeDisplayId.html'>SetNativeDisplayId</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 的默认 modelID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetOwnerGUID.html'>SetOwnerGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 所有者GUID设置为指定GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetPetGUID.html'>SetPetGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置宠物GUID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetPower.html'>SetPower</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 指定能量类型的能量值</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetPowerType.html'>SetPowerType</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 能量类型</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetPvP.html'>SetPvP</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> PvP开启或关闭</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetRooted.html'>SetRooted</a>
+            </td>
+            <td class='docblock short'>
+                <p>Roots the <a class="mod" href="../Unit/index.html">Unit</a> to the ground, if 'false' specified, unroots the <a class="mod" href="../Unit/index.html">Unit</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetSanctuary.html'>SetSanctuary</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a>'s sanctuary flag on or off.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetSheath.html'>SetSheath</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a>'s sheath state.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetSpeed.html'>SetSpeed</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a>'s speed of given [UnitMoveType] to given rate.
+If forced, packets sent to clients forcing the visual change.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetStandState.html'>SetStandState</a>
+            </td>
+            <td class='docblock short'>
+                <p>设置 <a class="mod" href="../Unit/index.html">Unit</a> 的站立状态 (预设状态?)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetWaterWalk.html'>SetWaterWalk</a>
+            </td>
+            <td class='docblock short'>
+                <p>Toggles (Sets) <a class="mod" href="../Unit/index.html">Unit</a>'s water walking</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='StopSpellCast.html'>StopSpellCast</a>
+            </td>
+            <td class='docblock short'>
+                <p>使 <a class="mod" href="../Unit/index.html">Unit</a> 停止当前的法术施放</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+
+<section id='search' class="content hidden"></section>
+<section class="footer"></section>
+<script>    window.rootPath = "../";</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on 06/07/2019</center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>
